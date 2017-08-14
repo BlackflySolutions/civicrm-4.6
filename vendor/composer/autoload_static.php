@@ -4,9 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit15273363a8ff4b798eb304902c5f2b23
+class ComposerStaticInit5ee2f25c67304d243ed26d232a77ae53
 {
     public static $files = array (
+        'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         '3919eeb97e98d4648304477f8ef734ba' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Random.php',
     );
 
@@ -70,12 +71,18 @@ class ComposerStaticInit15273363a8ff4b798eb304902c5f2b23
             array (
                 0 => __DIR__ . '/../..' . '/packages',
             ),
+            'PEAR' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/pear_exception',
+            ),
         ),
         'N' => 
         array (
             'Net' => 
             array (
                 0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
+                1 => __DIR__ . '/..' . '/pear/net_socket',
+                2 => __DIR__ . '/..' . '/pear/net_smtp',
             ),
         ),
         'M' => 
@@ -116,6 +123,13 @@ class ComposerStaticInit15273363a8ff4b798eb304902c5f2b23
                 0 => __DIR__ . '/..' . '/totten/ca-config/src',
             ),
         ),
+        'A' => 
+        array (
+            'Auth' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/auth_sasl',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -144,10 +158,10 @@ class ComposerStaticInit15273363a8ff4b798eb304902c5f2b23
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit15273363a8ff4b798eb304902c5f2b23::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit15273363a8ff4b798eb304902c5f2b23::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit15273363a8ff4b798eb304902c5f2b23::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit15273363a8ff4b798eb304902c5f2b23::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5ee2f25c67304d243ed26d232a77ae53::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5ee2f25c67304d243ed26d232a77ae53::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit5ee2f25c67304d243ed26d232a77ae53::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit5ee2f25c67304d243ed26d232a77ae53::$classMap;
 
         }, null, ClassLoader::class);
     }
